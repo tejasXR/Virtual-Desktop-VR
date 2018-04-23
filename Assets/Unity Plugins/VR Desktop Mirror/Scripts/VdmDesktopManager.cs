@@ -8,15 +8,18 @@ using System.Runtime.InteropServices;
 
 public class VdmDesktopManager : MonoBehaviour {
 
+    // set up global instance of manager
     public static VdmDesktopManager Instance;
 
     public static bool ActionInThisFrame = false;
     
+    // Keyboard controls for showing or hiding monitor views
     [Tooltip("Keyboard key to show/drag/hide")]
     public KeyCode KeyboardShow = KeyCode.LeftControl;
     [Tooltip("Keyboard key to zoom")]
     public KeyCode KeyboardZoom = KeyCode.LeftAlt;
 
+    // If we are using the VDM
 #if VDM_SteamVR
 
     public enum ViveButton
