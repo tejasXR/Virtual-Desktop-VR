@@ -255,7 +255,7 @@ public class VdmDesktopManager : MonoBehaviour {
     void OnEnable()
     {
 #if VDM_SteamVR
-        SteamVR_Utils.Event.Listen("device_connected", OnDeviceConnected);
+        //SteamVR_Utils.Event.Listen("device_connected", OnDeviceConnected);
 #endif
 
         HackStart();
@@ -270,7 +270,7 @@ public class VdmDesktopManager : MonoBehaviour {
     void OnDisable()
     {
 #if VDM_SteamVR
-        SteamVR_Utils.Event.Remove("device_connected", OnDeviceConnected);
+        //SteamVR_Utils.Event.Remove("device_connected", OnDeviceConnected);
 #endif
 
         HackStop();
