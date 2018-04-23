@@ -21,7 +21,8 @@ public class VdmDesktopManager : MonoBehaviour {
 
     // If we are using the VDM
 #if VDM_SteamVR
-
+    
+    // Create a public enum to define ViveButton presses
     public enum ViveButton
     {
         None = 0,
@@ -31,6 +32,7 @@ public class VdmDesktopManager : MonoBehaviour {
         Touchpad = 32,
     }
 
+    // Vive wand controls for showing/zomming monitor
     [Tooltip("Vive button to show/drag/hide")]
     public ViveButton ViveShow = ViveButton.Grip;
     [Tooltip("Vive button to zoom")]
